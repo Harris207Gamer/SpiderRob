@@ -49,8 +49,8 @@ if(cmd === `${prefix}botinfo`){
 }
 
 
-if (cmd === `γειά`){
-  return message.channel.send("γειά");
+if (cmd === `hi`){
+  return message.channel.send("hi");
 }
 //commands
 if(cmd === `${prefix}report`) {
