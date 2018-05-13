@@ -1,0 +1,30 @@
+{
+  "name": "SpiderRob",
+  "description": "testing",
+  "scripts": {
+  },
+  "env": {
+    "BOT_TOKEN": {
+      "required": true
+    },
+    "PREFIX": {
+      "required": true
+    },
+    "TOKEN": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
