@@ -57,7 +57,7 @@ if(cmd === `${prefix}report`) {
 
 let rUser = message.guild.member(message.mentions.users.first() ||  message.guild.members.get(args[0]));
 if(!rUser) return message.channel.send("ο χρήστης που ψάχνετε δεν βρέθηκε")
-let reeason = args.join(" ").slice(22);
+let reason = args.join(" ").slice(22);
 
 let reportEmbed = new Discord.RichEmbed()
 .setTitle("Αναφορές")
@@ -66,12 +66,10 @@ let reportEmbed = new Discord.RichEmbed()
 .addField("Αναφορά από", `${message.author}ID: ${message.author.id}`)
 .addField("channel", message.channel)
 .addField("ώρα, message.createdAt")
-.addField("λόγος", reeason);
+.addField("λόγος", reason);
 
- message.channel.send(reportEmbed);
-  
 message.delete().catch(O_o=>{});
-reportschannel.send(reportEmbed);
+message.channel.send(reportEmbed);
 
 }
 });
