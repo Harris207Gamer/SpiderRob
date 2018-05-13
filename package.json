@@ -1,0 +1,8 @@
+{
+    "name": "spiderrob",
+    "version": "1.0.0",
+    "description": "My own Discord bot",
+    "main": "index.js",
+    "author": "HARRIS 207 GAMER",
+    "dependencies": {}
+  }
