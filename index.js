@@ -68,9 +68,8 @@ let reportEmbed = new Discord.RichEmbed()
 .addField("ώρα, message.createdAt")
 .addField("λόγος", reeason);
 
-let reportschannel = message.guild.channels.find(`όνομα`,"#reports");
-if(!reportschannel) return message.channel.send("ο χρήστης δεν βρέθηκε");
-
+ message.channel.send(reportEmbed);
+  
 message.delete().catch(O_o=>{});
 reportschannel.send(reportEmbed);
 
