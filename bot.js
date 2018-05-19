@@ -83,8 +83,7 @@ if(cmd === `${prefix}kick`){
 
   return;
 }
-{
-  if(cmd === `${prefix}ban`);
+  if(cmd === `${prefix}ban`){
 
   let bUser = message.guild.member(message.mentions.users.first() ||  message.guild.members.get(args[0]));
   if(!bUser) return message.channel.send("ο χρήστης δεν βρέθηκε");
