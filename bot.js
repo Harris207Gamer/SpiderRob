@@ -90,7 +90,7 @@ if(cmd === `${prefix}kick`){
   if(!bUser) return message.channel.send("ο χρήστης δεν βρέθηκε");
   let breason = args.join(" ").slice(22);
   if(!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send("ο χρήστης έχει την άδεια να αποκλειστεί άτομα, δεν μπορώ να το κάνω");
-  if(bUser.hasPermission("BAN_MEMBERS")) return message.channel.send("αυτός ο χρήστης δεν μπορέι να αποκλεοιστεί");
+  if(bUser.hasPermission("BAN_MEMBERS")) return message.channel.send("αυτός ο χρήστης δεν μπορέι να αποκλειστεί");
 
 
   let   BanEmbed = new Discord.RichEmbed()
