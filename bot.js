@@ -6,8 +6,8 @@ const bot = new Discord.Client({disableEveryone:true});
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online!`);
  // bot.user.setGame("testing")
- //bot.user.setStatus("idle")
-  bot.user.setStatus("online")
+ bot.user.setStatus("idle")
+ //bot.user.setStatus("online")
  // bot.user.setStatus("invisible")
  // bot.user.setStatus("dnd")
   bot.user.setActivity("στις εντολές σας", {type: "LISTENING"})
