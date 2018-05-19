@@ -52,7 +52,38 @@ if(cmd === `${prefix}botinfo`){
 if (cmd === `γειά`){
   return message.channel.send('γειά');
 }
-//commands
+  //kick and ban commands
+
+//kick [@user] [reason]
+//ban [@user] [reason]
+
+if(cmd === `${prefix}kick`){
+  
+  let kUser = message.guild.member(message.mentions.users.first() ||  message.guild.members.get(args[0]));
+  if(!kUser) return message.channel.send("ο χρήστης δεν βρέθηκε");
+  let Kreason = args.join(" ").slice(22);
+  if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send("ο χρήστης έχει την άδεια να διώχνει άτομα, δεν μπορώ να το κάνω");
+  if(kUser.hasPermission("KICK_MEMBERS")) return message.channel.send("αυτός ο χρήστης δεν μπορέι να διωχτεί");
+
+
+  let   KickEmbed = new Discord.RichEmbed()
+  .setTitle("~kick~")
+  .setColor("33874")
+  .addField("Διωχμένος χρήστης", `${kUser} ID: ${kUser.id}`)
+  .addField("Τον έδιωξε ο", `<@${message.author.id}> ID: ${message.author.id}`)
+  .addField("Διώχτικε στο channel", message.channel.createdAt)
+  .addField("ώρα", message.createdAt)
+  .addField("λόγος", Kreason);
+
+  let kickChannel = message.guild.channels.find(`name`,"incidents");
+  if(!kickChannel) return message.channel.send("δεν βρέθηκαν περιστατικά στο κανάλι");
+
+  message.guild.member(kUser).kick(reason);
+  kickChannel.send(KickEmbed);
+
+  return;
+}
+//report command
 if(cmd === `${prefix}report`) {
 
 let rUser = message.guild.member(message.mentions.users.first() ||  message.guild.members.get(args[0]));
