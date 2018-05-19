@@ -1,4 +1,4 @@
-const botconfig = require("./botconfig.json");
+const auth = require("./auth.json");
 const Discord = require("discord.js");
 
 const bot = new Discord.Client({disableEveryone:true});
@@ -13,12 +13,12 @@ bot.on("ready", async () => {
   bot.user.setActivity("στις εντολές σας", {type: "LISTENING"})
 
 });
-//responses
+//prefix
 bot.on("message", async message => {
 if(message.author.bot) return;
 if(message.channel.type === "test") return;
 
-let prefix = botconfig.prefix;
+let prefix = auth.prefix;
 let messageArray = message.content.split(" ");
 let cmd = messageArray[0];
 let args = messageArray.slice(1);
@@ -48,9 +48,9 @@ if(cmd === `${prefix}botinfo`){
   return message.channel.send(botembed);
 }
 
-
-if (cmd === `hi`){
-  return message.channel.send("hi");
+//resonses
+if (cmd === `γειά`){
+  return message.channel.send('γειά');
 }
 //commands
 if(cmd === `${prefix}report`) {
@@ -61,8 +61,8 @@ let reason = args.join(" ").slice(22);
 
 let reportEmbed = new Discord.RichEmbed()
 .setTitle("Αναφορές")
-.setColor("21633")
-.addField("αναφερόμενος χρήστης", `${rUser} ID: ${rUser.id}`)
+.setColor("11633")
+.addField("αναφερόμενος χρήστης",`${rUser} ID: ${rUser.id}`)
 .addField("Αναφορά από", `${message.author}ID: ${message.author.id}`)
 .addField("channel", message.channel)
 .addField("ώρα, message.createdAt")
@@ -74,4 +74,4 @@ message.channel.send(reportEmbed);
 }
 });
 
-bot.login(botconfig.token);
+bot.login(auth.token);
