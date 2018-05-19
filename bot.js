@@ -128,10 +128,11 @@ let reportEmbed = new Discord.RichEmbed()
 .addField("λόγος", rreason);
 
 message.delete().catch(O_o=>{});
-message.channel.send(reportEmbed);
   
   let reportschannel = message.guild.channels.find(`name`, "test");
 if(!reportschannel) return message.channel.send("δεν βρέθηκε το channel")
+  
+  message.reportchannel.send(reportEmbed);
 
 }
 });
