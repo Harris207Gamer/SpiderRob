@@ -100,7 +100,7 @@ if(cmd === `${prefix}kick`){
   .addField("λόγος", breason);
   
   message.guild.member(bUser).ban(bReason);
-  banChanel.send(banEmbed);
+  banChannel.send(banEmbed);
 
 
 
