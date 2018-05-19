@@ -101,7 +101,7 @@ if(cmd === `${prefix}kick`){
   .addField("ώρα", message.createdAt)
   .addField("λόγος", bReason);
   
-    let banChannel = message.guild.channels.find(`name`, "αρχεία καταγραφής");
+    let banChannel = message.guild.channels.find(`name`, "αρχεία-καταγραφής");
   if(!banChannel) return message.channel.send("δεν βρέθηκαν περιστατικά στο κανάλι");
   
   message.guild.member(bUser).ban(bReason);
