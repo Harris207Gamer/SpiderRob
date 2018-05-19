@@ -1,7 +1,8 @@
 {
-   "name": "SpiderRob",
+  "name": "SpiderRob",
   "version": "0.0.1",
   "description": "at your commands!",
   "main": "bot.js",
-  "author": "HARRIS 207 GAMER"
+  "author": "HARRIS 207 GAMER",
+  "dependencies": {}
   }
