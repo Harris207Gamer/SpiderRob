@@ -2,6 +2,6 @@
    "name": "package",
   "version": "1.0.0",
   "description": "at your commands!",
-  "main": "index.js",
+  "main": "bot.js",
   "author": "HARRIS 207 GAMER"
   }
