@@ -75,9 +75,6 @@ if(cmd === `${prefix}kick`){
   .addField("ώρα", message.createdAt)
   .addField("λόγος", Kreason);
 
-  let kickChannel = message.guild.channels.find(`name`,"incidents");
-  if(!kickChannel) return message.channel.send("δεν βρέθηκαν περιστατικά στο κανάλι");
-
   message.guild.member(kUser).kick(reason);
   kickChannel.send(KickEmbed);
 
@@ -101,9 +98,6 @@ if(cmd === `${prefix}kick`){
   .addField("Αποκλείστηκε στο channel", message.channel.createdAt)
   .addField("ώρα", message.createdAt)
   .addField("λόγος", breason);
-
-  let banChannel = message.guild.channels.find(`name`,"incidents");
-  if(!banChannel) return message.channel.send("δεν βρέθηκαν περιστατικά στο κανάλι");
   
   message.guild.member(bUser).ban(bReason);
   banChanel.send(banEmbed);
