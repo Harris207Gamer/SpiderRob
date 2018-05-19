@@ -62,7 +62,7 @@ if(cmd === `${prefix}kick`){
   let kUser = message.guild.member(message.mentions.users.first() ||  message.guild.members.get(args[0]));
   if(!kUser) return message.channel.send("ο χρήστης δεν βρέθηκε");
   let Kreason = args.join(" ").slice(22);
-  if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send("δεν έχεις την άδεια να χρησημοποιήσεις αυτή την εντολή, δεν μπορώ να το κάνω");
+  if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send("δεν έχεις την άδεια να διώξεις αυτόν τον χρήστη");
   if(kUser.hasPermission("KICK_MEMBERS")) return message.channel.send("αυτός ο χρήστης δεν μπορέι να διωχτεί");
 
 
