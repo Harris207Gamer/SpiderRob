@@ -3,14 +3,5 @@
   "version": "1.0.0",
   "description": "at your commands!",
   "main": "index.js",
-  "dependencies": {
-    "discord.io": "^2.5.3",
-    "winston": "^2.4.0"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "HARRIS 207 GAMER",
-  "license": "ISC"
+  "author": "HARRIS 207 GAMER"
   }
