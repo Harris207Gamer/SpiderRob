@@ -1,6 +1,6 @@
 {
     "name": "spiderrob",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "description": "at your commands",
     "main": "bot.js",
     "scripts": {
