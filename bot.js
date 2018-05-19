@@ -62,7 +62,7 @@ if(cmd === `${prefix}kick`){
   let kUser = message.guild.member(message.mentions.users.first() ||  message.guild.members.get(args[0]));
   if(!kUser) return message.channel.send("ο χρήστης δεν βρέθηκε");
   let Kreason = args.join(" ").slice(22);
-  if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send("ο χρήστης έχει την άδεια να διώχνει άτομα, δεν μπορώ να το κάνω");
+  if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send("δεν έχεις την άδεια να χρησημοποιήσεις αυτή την εντολή, δεν μπορώ να το κάνω");
   if(kUser.hasPermission("KICK_MEMBERS")) return message.channel.send("αυτός ο χρήστης δεν μπορέι να διωχτεί");
 
 
@@ -89,7 +89,7 @@ if(cmd === `${prefix}kick`){
   let bUser = message.guild.member(message.mentions.users.first() ||  message.guild.members.get(args[0]));
   if(!bUser) return message.channel.send("ο χρήστης δεν βρέθηκε");
   let breason = args.join(" ").slice(22);
-  if(!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send("ο χρήστης έχει την άδεια να αποκλειστεί άτομα, δεν μπορώ να το κάνω");
+  if(!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send("δεν έχεις την άδεια να αποκλείσεις αυτόν τον χρήστη");
   if(bUser.hasPermission("BAN_MEMBERS")) return message.channel.send("αυτός ο χρήστης δεν μπορέι να αποκλειστεί");
 
 
