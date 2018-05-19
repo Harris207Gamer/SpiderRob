@@ -126,14 +126,13 @@ let reportEmbed = new Discord.RichEmbed()
 .addField("channel", message.channel)
 .addField("ώρα", message.createdAt)
 .addField("λόγος", rreason);
-
-message.delete().catch(O_o=>{});
   
-  let reportschannel = message.guild.channels.find(`name`, "test");
-if(!reportschannel) return message.channel.send("δεν βρέθηκε το channel")
+  let reportchannel = message.guild.channels.find(`name`, "test");
+if(!reportchannel) return message.channel.send("δεν βρέθηκε το channel")
   
-  message.reportchannel.send(reportEmbed);
-
+  message.delete().catch(O_o=>{});
+reportchannel.send(reportEmbed);
+  
 }
 });
 
