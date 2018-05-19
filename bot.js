@@ -128,7 +128,7 @@ let reportEmbed = new Discord.RichEmbed()
 .addField("λόγος", rreason);
   
   let reportchannel = message.guild.channels.find(`name`, "test");
-if(!reportchannel) return message.channel.send("δεν βρέθηκε το channel")
+if(!reportchannel) return message.channel.send("δεν βρέθηκε το channel");
   
   message.delete().catch(O_o=>{});
 reportchannel.send(reportEmbed);
