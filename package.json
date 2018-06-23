@@ -1,0 +1,14 @@
+{
+  "name": "spiderrob",
+  "version": "0.0.1",
+  "description": "at your commands",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "discord.js": "^11.3.2",
+    "nodemon": "^1.17.5",
+    "request": "^2.87.0"
+  }
+}
