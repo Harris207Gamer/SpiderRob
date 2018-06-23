@@ -5,7 +5,7 @@ let warns = JSON.parse(fs.readFileSync("./warnings.json", "utf8"));
 
 module.exports.run = async (bot, message, args) => {
 
-  //!warn @daeshan <reason>
+  //=warn @daeshan <reason>
   if(!message.member.hasPermission("MANAGE_MEMBERS")) return message.reply("δεν μπορώ να το κάνω!");
   let wUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0])
   if(!wUser) return message.reply("δεν βρέθηκαν");
@@ -23,13 +23,13 @@ module.exports.run = async (bot, message, args) => {
   });
 
   let warnEmbed = new Discord.RichEmbed()
-  .setDescription("Warns")
+  .setDescription("Προειδοποίηση")
   .setAuthor(message.author.username)
   .setColor("#fc6400")
-  .addField("Warned User", `<@${wUser.id}>`)
-  .addField("Warned In", message.channel)
-  .addField("Number of Warnings", warns[wUser.id].warns)
-  .addField("Reason", reason);
+  .addField("προειδοποιήθηκε ο", `<@${wUser.id}>`)
+  .addField("προειδοποιήθηκε στο", message.channel)
+  .addField("σύνολο προειδοποιήσεων", warns[wUser.id].warns)
+  .addField("λόγος", reason);
 
   let warnchannel = message.guild.channels.find(`name`, "αρχεία-καταγραφής");
   if(!warnchannel) return message.reply("δεν βρέθηκε channel");
@@ -42,16 +42,16 @@ module.exports.run = async (bot, message, args) => {
 
     let mutetime = "10s";
     await(wUser.addRole(muterole.id));
-    message.channel.send(`<@${wUser.id}> has been temporarily muted`);
+    message.channel.send(`<@${wUser.id}> έχει τεθεί σε σίγαση`);
 
     setTimeout(function(){
       wUser.removeRole(muterole.id)
-      message.reply(`<@${wUser.id}> has been unmuted.`)
+      message.reply(`<@${wUser.id}> έχει βγει απο σίγαση.`)
     }, ms(mutetime))
   }
   if(warns[wUser.id].warns == 3){
     message.guild.member(wUser).ban(reason);
-    message.reply(`<@${wUser.id}> has been banned.`)
+    message.reply(`<@${wUser.id}> έχει αποκλειστεί.`)
   }
 
 }
