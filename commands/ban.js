@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
     let bUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-    if(!bUser) return message.channel.send("Can't find user!");
+    if(!bUser) return message.channel.send("ο χρήστης δεν βρέθηκε");
     let bReason = args.join(" ").slice(22);
     if(!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send("δεν μπορώ να το κάνω!");
     if(bUser.hasPermission("BAN_MEMBERS")) return message.channel.send("αυτός το χρήστης δεν μπορεί να αποκλειστεί!");
