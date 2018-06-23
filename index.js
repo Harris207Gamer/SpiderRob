@@ -43,9 +43,9 @@ bot.on("message", async message => {
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot,message,args);
 
-  -if (message.content === "fuck"){
-  -    message.react("😠");
-  -}
+  if (message.content === "fuck"){
+   return   message.react("😠");
+  }
 
 
 });
