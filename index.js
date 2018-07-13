@@ -43,9 +43,15 @@ bot.on("message", async message => {
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot,message,args);
 
+  //responses
   if (message.content === "fuck"){
-   return   message.react("😠");
-  }
+   return  message.react("😠");
+   }
+
+   if (message.content === "γειά"){
+     return message.channel.send(`γειά σου και εσένα!\n ${message.member}`);
+   }
+  //responses
 
 
 });
