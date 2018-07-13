@@ -45,12 +45,12 @@ bot.on("message", async message => {
 
   //responses
   if (message.content === "fuck"){
-   return  message.react("😠");
+  return message.react("😠");
    }
 
-   if (message.content === "γειά"){
-     return message.channel.send(`γειά σου και εσένα!\n ${message.member}`);
-   }
+  if (message.content === "γειά"){
+  return message.channel.send(`γειά σου και εσένα!\n ${message.member}`);
+  }
   //responses
 
 
