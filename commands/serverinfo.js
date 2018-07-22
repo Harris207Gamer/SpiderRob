@@ -3,13 +3,13 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
     let sicon = message.guild.iconURL;
     let serverembed = new Discord.RichEmbed()
-    .setDescription("Server Information")
+    .setDescription("Πληροφορίες του Server")
     .setColor("#15f153")
     .setThumbnail(sicon)
-    .addField("Server Name", message.guild.name)
-    .addField("Created On", message.guild.createdAt)
-    .addField("You Joined", message.member.joinedAt)
-    .addField("Total Members", message.guild.memberCount);
+    .addField("Όνομα Server", message.guild.name)
+    .addField("Δημιουργήθηκε στις", message.guild.createdAt)
+    .addField("Μπήκες στις", message.member.joinedAt)
+    .addField("Συνολικά μέλη", message.guild.memberCount);
 
     message.channel.send(serverembed);
 }
