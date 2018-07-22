@@ -3,11 +3,11 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
     let bicon = bot.user.displayAvatarURL;
     let botembed = new Discord.RichEmbed()
-    .setDescription("Bot Information")
-    .setColor("#15f153")
+    .setDescription("Πληροφορίες του Bot")
+    .setColor("100125")
     .setThumbnail(bicon)
-    .addField("Bot Name", bot.user.username)
-    .addField("Created On", bot.user.createdAt);
+    .addField("Όνομα Bot", bot.user.username)
+    .addField("Δημιουργήθηκε στίς", bot.user.createdAt);
 
     message.channel.send(botembed);
 }
