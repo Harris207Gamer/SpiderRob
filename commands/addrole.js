@@ -21,7 +21,7 @@ module.exports.run = async (bot, message, args) => {
   }
 }  
   try{
-    await message.channel.send("`Ο ρόλος άλλαξε ☑️`")
+    await message.channel.send("`Ο ρόλος προσθέθηκε ☑️`")
     }
 
 module.exports.help = {
