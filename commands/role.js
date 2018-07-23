@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
 
   //!addrole @andrew Dog Person
-  if (!message.content("give")) return message.reply("δεν διάλεξες ενέργεια");
+
 
   if(!message.member.roles.has("🛡ΔΙΑΧΕΙΡΗΣΤΕΣ🛡")) return message.reply("Συγνώμη αλλά δεν μπορώ να το κάνω.");
   let rMember = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
