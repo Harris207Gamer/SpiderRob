@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
 var x = Math.floor(Math.random() * 6 + 1);
 
 
- return message.channel.send("έφερες"+"```"+(y)+"+"+(x)+(" = ")+(y+x)+"```");
+  message.channel.send("έφερες"+"```"+(y)+"+"+(x)+(" = ")+(y+x)+"```");
 
 }
 
