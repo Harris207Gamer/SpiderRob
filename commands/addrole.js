@@ -14,10 +14,10 @@ module.exports.run = async (bot, message, args) => {
   if(rMember.roles.has(gRole.id)) return message.reply("Αυτός ο χρήστης έχει ήδη αυτον τον ρόλο.");
   await(rMember.addRole(gRole.id));
 
-try [
+try {
   await message.content.send("`Ο ρόλος έχει προσθεθεί`☑️")
-    ]
-  ]
+    }
+  }
 module.exports.help = {
   name: "addrole"
 }
