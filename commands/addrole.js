@@ -19,7 +19,7 @@ module.exports.run = async (bot, message, args) => {
   }catch(e){
     message.channel.send(`Congrats to <@${rMember.id}>, they have been given the role ${gRole.name}. We tried to DM them, but their DMs are locked.`)
   }
-}  
+
   try{
     await message.channel.send(`Ο ρόλος προσθέθηκε ☑️ `)
     }
