@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
 }
 
 try {
-await message.channel.send("`Ο ρόλος αφαιρέθηκε ❎`");
+await message.channel.send(`Ο ρόλος αφαιρέθηκε ❎ `);
 }
 module.exports.help = {
   name: "removerole"
