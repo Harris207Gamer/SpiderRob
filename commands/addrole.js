@@ -13,7 +13,7 @@ module.exports.run = async (bot, message, args) => {
 
   if(rMember.roles.has(gRole.id)) return message.reply("Αυτός ο χρήστης έχει ήδη αυτον τον ρόλο.");
   await(rMember.addRole(gRole.id));
-
+}
 
 module.exports.help = {
   name: "addrole"
