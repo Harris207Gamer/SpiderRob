@@ -11,7 +11,12 @@ module.exports.run = async (bot, message, args) => {
 
   if(!rMember.roles.has(gRole.id)) return message.reply("αυτός ο χρήστης έχει ήδη αυτόν τον ρόλο.");
   await(rMember.removeRole(gRole.id));
-}
+
+  try {
+    await message.channel.send("`Ο ρόλος αφερέθηκε`❎")
+  }
+  
+  }
 
 
 module.exports.help = {
