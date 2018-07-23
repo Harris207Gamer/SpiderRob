@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
   //!addrole @andrew Dog Person
 
 
-  if(!message.member.roles.has("🛡ΔΙΑΧΕΙΡΗΣΤΕΣ🛡")) return message.reply("Συγνώμη αλλά δεν μπορώ να το κάνω.");
+  if(!message.member.hasRole("🛡ΔΙΑΧΕΙΡΗΣΤΕΣ🛡")) return message.reply("Συγνώμη αλλά δεν μπορώ να το κάνω.");
   let rMember = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
   if(!rMember) return message.reply("Ο χρήστης δεν βρέθηκε.");
   let role = args.join(" ").slice(22);
@@ -21,5 +21,5 @@ module.exports.run = async (bot, message, args) => {
     
   }
 module.exports.help = {
-  name: "role"
+  name: "role give"
 }
