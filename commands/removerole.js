@@ -13,7 +13,7 @@ module.exports.run = async (bot, message, args) => {
   await(rMember.removeRole(gRole.id));
 
   try {
-    await message.channel.send("`Ο ρόλος αφερέθηκε`❎")
+    await message.channel.send(`Ο ρόλος αφερέθηκε❎`)
   }
   
   }
