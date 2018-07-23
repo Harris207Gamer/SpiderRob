@@ -5,7 +5,12 @@ module.exports.run = async (bot, message, args) => {
 var x = Math.floor(Math.random() * 6 + 1);
 
 
-  message.channel.send("έφερες"+"```"+(y)+"+"+(x)+(" = ")+(y+x)+"```");
+  var y = Math.floor(Math.random() * 6 + 1);
+var x = Math.floor(Math.random() * 6 + 1);
+
+if (message.content === `${prefix}roll` ){
+ return message.channel.send("έφερες"+"```"+(y)+"+"+(x)+(" = ")+(y+x)+"```");
+}
 
  
 }
