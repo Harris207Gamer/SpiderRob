@@ -15,7 +15,7 @@ module.exports.run = async (bot, message, args) => {
   await(rMember.addRole(gRole.id));
 
 try {
-  await message.content.send("`Ο ρόλος έχει προσθεθεί`☑️")
+  await message.content.send(`Ο ρόλος έχει προσθεθεί☑️`)
     }
   }
 module.exports.help = {
