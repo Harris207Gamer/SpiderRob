@@ -3,7 +3,8 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
 
   //!addrole @andrew Dog Person
-  if(!message.member.hasRole("🛡ΔΙΑΧΕΙΡΗΣΤΕΣ🛡")) return message.reply("Συγνώμη αλλά δεν μπορώ να το κάνω.");
+    let admin = message.guild.roles.find("name", "🛡ΔΙΑΧΕΙΡΗΣΤΕΣ🛡");
+  if(!message.member.hasRole(admin)) return message.reply("Συγνώμη αλλά δεν μπορώ να το κάνω.");
   let rMember = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
   if(!rMember) return message.reply("Ο χρήστης δεν βρέθηκε.");
   let role = args.join(" ").slice(22);
