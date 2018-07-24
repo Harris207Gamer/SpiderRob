@@ -4,8 +4,8 @@
   "description": "at your commands",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
-    "start": "npm install scalc"
+    "start": "node index.js",
+    "start": "npm install scalc",
     "start": "npm install scalc -g"
   },
   "dependencies": {
