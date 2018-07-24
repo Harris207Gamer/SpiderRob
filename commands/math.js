@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const scalc = requite("scalc");
+const scalc = require("scalc");
 
 module.exports.run = (bot, message ,args) => {
 
