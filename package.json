@@ -5,10 +5,13 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
+    "start": "npm install scalc"
+    "start": "npm install scalc -g"
   },
   "dependencies": {
     "discord.js": "^11.3.2",
     "nodemon": "^1.17.5",
-    "request": "^2.87.0"
+    "request": "^2.87.0",
+    "scalc": ""
   }
 }
