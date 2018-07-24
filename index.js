@@ -1,3 +1,4 @@
+const scalc = require("scalc");
 const botconfig = require("./botconfig.json");
 const tokenfile = require("./token.json");
 const Discord = require("discord.js");
