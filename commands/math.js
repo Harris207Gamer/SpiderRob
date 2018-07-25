@@ -1,15 +1,15 @@
 const Discord = require("discord.js");
 const scalc = require("scalc");
 
-module.exports.run = async (bot, message ,args) => {
+module.exports.run = (bot, message ,args) => {
 
         
 	
-	let calc = message.content.split(" ").join(" ");
+	let calc = args.join(" ");
 	let result = scalc(`${calc}`);
 	if (!calc) return message.reply("διάλεξε πράξη");
-  if (!result) return message.channel.send("0");
-  console.log(result);
+        if (!result) return message.channel.send("0");
+
 	return message.channel.send(result);
   
 	
