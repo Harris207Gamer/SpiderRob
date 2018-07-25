@@ -1,9 +1,9 @@
 const Discord = require("discord.js");
 const scalc = require("scalc");
 
-module.exports.run = (bot, message ,args, prefix , command) => {
+module.exports.run = (bot, message ,args, prefix, command) => {
 
-        if (command === prefix+"math"){
+        if (message.content === prefix+"math"){
 	
 	let calc = message.content.split(" ").slice(1);
 	let result = scalc(`${calc}`);
