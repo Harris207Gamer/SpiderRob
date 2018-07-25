@@ -3,7 +3,7 @@ const scalc = require("scalc");
 
 module.exports.run = (bot, message ,args) => {
 
-        if (message.content === prefix+"math)
+        if (message.content === prefix+"math")
 	
 	let calc = message.content.split(" ").slice(1);
 	let result = scalc(`${calc}`);
