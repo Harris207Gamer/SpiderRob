@@ -5,7 +5,7 @@ module.exports.run = async (bot, message ,args) => {
 
         
 	
-	let calc = message.content.split(" ").slice(1).join(" ");
+	let calc = message.content.split(" ").join(" ");
 	let result = scalc(`${calc}`);
 	if (!calc) return message.reply("διάλεξε πράξη");
   if (!result) return message.channel.send("0");
