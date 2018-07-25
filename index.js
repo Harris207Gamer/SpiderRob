@@ -39,10 +39,11 @@ bot.on("message", async message => {
 
   let prefix = botconfig.prefix;
   let messageArray = message.content.split(" ");
-  let cmd = messageArray[0];
+  let command = messageArray[0];
   let args = messageArray.slice(1);
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot,message,args);
+  let prefix = "="
 
   //responses
   if (message.content === "fuck"){
