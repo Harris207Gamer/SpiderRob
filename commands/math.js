@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const scalc = require("scalc");
 
-module.exports.run = (bot, message ,args) => {
+module.exports.run = async (bot, message ,args) => {
 
         
 	
