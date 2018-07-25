@@ -53,6 +53,10 @@ bot.on("message", async message => {
   if (message.content === "γειά"){
   return message.channel.send(`γειά σου και εσένα!\n ${message.member}`);
   }
+  
+  if (message.content === "σύνολικά μέλη*){
+        return message.channel.send("όλα τα μέλη του server συνολικά είναι "+`${bot.guild.members}`);
+      }
   //responses
 
 
