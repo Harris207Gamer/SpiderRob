@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "discord.js": "^11.3.2",
-    "nodemon": "^1.17.5",
+    "nodemon": "^1.18.3",
     "request": "^2.87.0",
     "scalc": "^2.0.1"
   }
