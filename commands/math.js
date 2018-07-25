@@ -5,10 +5,10 @@ module.exports.run = async (bot, message ,args) => {
 
         
 	
-	let calc = message.content.split("").slice(5);
+	let calc = args.join(" ");
 	let result = scalc(`${calc}`);
 	if (!calc) return message.reply("διάλεξε πράξη");
-        if (!result) return message.reply("δεν βγαίνει αποτέλεσμα");
+        if (!result) return message.channel.send("0");
         console.log(result);
 	return message.channel.send(result);
   
