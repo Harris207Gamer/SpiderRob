@@ -4,14 +4,14 @@
   "description": "at your commands",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "start": "npm install scalc",
-    "start": "npm install scalc -g"
+    "start": "node index.js"
+    
+
   },
   "dependencies": {
     "discord.js": "^11.3.2",
     "nodemon": "^1.17.5",
     "request": "^2.87.0",
-    "scalc": ""
+    "scalc": "^2.0.1"
   }
 }
