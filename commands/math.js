@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const scalc = require("scalc");
 
-module.exports.run = async (bot, message ,args) => {
+module.exports.run = async (bot, message, args) => {
 
         
 	let math = args.join(" ");
@@ -16,5 +16,5 @@ module.exports.run = async (bot, message ,args) => {
 }
 
 module.exports.help = {
-    name:"math"
+    name: "math"
 }
