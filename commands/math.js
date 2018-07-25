@@ -3,9 +3,9 @@ const scalc = require("scalc");
 
 module.exports.run = (bot, message ,args) => {
 
-        if (message.content === prefix+"math")
+        
 	
-	let calc = message.content.split(" ").slice(1);
+	let calc = message.content.split("").slice(1);
 	let result = scalc(`${calc}`);
 	if (!calc) return message.reply("διάλεξε πράξη");
         if (!result) return message.reply("δεν βγαίνει αποτέλεσμα");
@@ -16,6 +16,6 @@ module.exports.run = (bot, message ,args) => {
 
 }
 
-//module.exports.help = {
-  //  name:"math"
-//}
+module.exports.help = {
+    name:"math"
+}
