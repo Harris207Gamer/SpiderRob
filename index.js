@@ -35,7 +35,7 @@ bot.on("ready", async () => {
 
 bot.on("message", async message => {
   if(message.author.bot) return;
-  if(message.channel.type === "dm") return;
+  if(message.channel.type === "test") return message.channel.send("hi");
 
   let prefix = botconfig.prefix;
   let messageArray = message.content.split(" ");
@@ -43,7 +43,7 @@ bot.on("message", async message => {
   let args = messageArray.slice(1);
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot,message,args);
-  let prefix = "="
+ 
 
   //responses
   if (message.content === "fuck"){
