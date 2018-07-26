@@ -62,34 +62,5 @@ bot.on("message", async message => {
 
 });
 
-client.on("guildMemberAdd", (message, member) => {
-	     let membercount = message.guild.memberCount;
-	     let totalmembers = message.guild.channels.get("471894838179266560");
-	     
-	  message.channel.fetchMessages("471902508197871616") .then(messages => { const fetchedMessage = messages.first();  fetchedMessage.edit("συνολικά τα μέλη του server είναι \t"+"`"+(membercount)+"`");  
-	 
-	     
-});
-	     
-	     console.log(membercount);
-	});
-	
-	client.on("guildMemberRemove", (message, member) => {
-	     let membercount = message.guild.memberCount;
-	     let totalmembers = message.guild.channels.get("471894838179266560");
-	     
-	     
-	
-
-message.channel.fetchMessages("471902508197871616") 
-.then(messages => {
-	messages.first().edit("συνολικά τα μέλη του server είναι \t"+"`"+(membercount)+"`"); 
-});
-
-
-
-	     
-	     console.log(membercount);
-	});
 
 bot.login(tokenfile.token);
