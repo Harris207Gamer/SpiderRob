@@ -63,12 +63,12 @@ bot.on("message", async message => {
 });
 
 
-bot.on("guildMemberAdd", (member) => {
-	     let membercount = bot.guild.memberCount;
-	     let totalmembers = bot.guild.channels.get("471894838179266560");
+bot.on("guildMemberAdd", (message) => {
+	     let membercount = message.guild.memberCount;
+	     let totalmembers = message.guild.channels.get("471894838179266560");
 	     
-	  totalmembers.fetchMessage("471902508197871616").then(msg => {
-	  	msg.edit("συνολικά τα μέλη του server είναι \t"+"`"+(membercount)+"`");  
+	  totalmembers.fetchMessage("471902508197871616").then((message) => {
+	message.edit("συνολικά τα μέλη του server είναι \t"+"`"+(membercount)+"`");  
 	  	
 	 
 	     
@@ -78,12 +78,12 @@ bot.on("guildMemberAdd", (member) => {
 	});
 	
 	
-bot.on("guildMemberRemove", (member) => {
-	     let membercount = bot.guild.memberCount;
-	     let totalmembers = bot.guild.channels.get("471894838179266560");
+bot.on("guildMemberRemove", (message) => {
+	     let membercount = message.guild.memberCount;
+	     let totalmembers = message.guild.channels.get("471894838179266560");
 	     
-	totalmembers.fetchMessage("471902508197871616").then(msg => {
-		msg.edit("συνολικά τα μέλη του server είναι \t"+"`"+(membercount)+"`");     
+	totalmembers.fetchMessage("471902508197871616").then((message) => {
+		message.edit("συνολικά τα μέλη του server είναι \t"+"`"+(membercount)+"`");     
 });
 
 
