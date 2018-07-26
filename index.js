@@ -63,7 +63,7 @@ bot.on("message", async message => {
 });
 
 
-bot.on("guildMemberAdd", (member) => {
+bot.on("guildMemberAdd", (member, message) => {
 	     let membercount = message.guild.memberCount;
 	     let totalmembers = message.guild.channels.get("471894838179266560");
 	     
@@ -78,7 +78,7 @@ bot.on("guildMemberAdd", (member) => {
 	});
 	
 	
-bot.on("guildMemberRemove", (member) => {
+bot.on("guildMemberRemove", (member, message) => {
 	     let membercount = message.guild.memberCount;
 	     let totalmembers = message.guild.channels.get("471894838179266560");
 	     
