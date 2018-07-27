@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-module.exports.run = async (message, bot, args) => {
+module.exports.run = async (bot, message, args) => {
 
 var admin = message.guild.roles.get("381016423612416000");		
 if(!message.member.roles.has(admin.id)) return message.reply("δεν έχεις τον ρόλο για να το κάνεις αυτό");		
