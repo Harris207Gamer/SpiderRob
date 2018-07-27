@@ -1,6 +1,6 @@
 const scalc = require("scalc");
 const botconfig = require("./botconfig.json");
-const tokenfile = require("./token.json");
+const token = proccess.env.token;
 const Discord = require("discord.js");
 const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
@@ -92,4 +92,4 @@ bot.on("guildMemberRemove", (message) => {
 	     console.log(membercount);
 	});
 
-bot.login(tokenfile.token);
+bot.login(token);
