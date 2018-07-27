@@ -1,6 +1,6 @@
 const scalc = require("scalc");
 const botconfig = require("./botconfig.json");
-const token = proccess.env.token;
+const token = process.env.token;
 const Discord = require("discord.js");
 const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
