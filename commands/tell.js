@@ -15,8 +15,9 @@ module.exports.run = async (bot, message, args) => {
 
 
 		message.delete().catch();
-
-
+              
+	if(!channel_mention) return message.reply("Διάλεξε channel");
+        if(!channel_tell) return message.reply("πες κάτι");
 	return channel_tell.send(tell);
 	
 }
