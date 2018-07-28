@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+const scalc = require("scalc");
 
 module.exports.run = async (bot, message, args) => {
 
