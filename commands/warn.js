@@ -18,9 +18,9 @@ module.exports.run = async (bot, message, args) => {
 
   warns[wUser.id].warns++;
 
-  fs.writeFile("./warnings.json", JSON.stringify(warns), (err) => {
-    if (err) console.log(err)
-  });
+  fs.writeFileSync("/Harris207Gamer/SpiderRob/warnings.json", JSON.stringify(warns));
+
+
 
   let warnEmbed = new Discord.RichEmbed()
   .setDescription("Προειδοποίηση")
